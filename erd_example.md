@@ -19,7 +19,7 @@ config:
 config:
   layout: dagre
   look: classic
-  theme: neutral
+  theme: null
 ---
     stateDiagram-v2
         state if_state <<choice>>
