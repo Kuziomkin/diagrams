@@ -1,6 +1,11 @@
 ## State diagrams
 
 ```mermaid
+---
+config:
+  look: handDrawn
+  theme: neutral
+---
     stateDiagram-v2
         state if_state <<choice>>
         [*] --> IsPositive
