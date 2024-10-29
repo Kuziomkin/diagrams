@@ -1,3 +1,5 @@
+# State diagrams
+
 ```mermaid
     stateDiagram-v2
         state if_state <<choice>>
