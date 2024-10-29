@@ -93,21 +93,6 @@ config:
         disk2:T -- B:db
 ```
 
-```mermaid
----
-config:
-  layout: dagre
-  look: classic
-  theme: base
----
-flowchart TD
-    id1(This is the text in the box)
-    id2[(Database)]
-
-    subgraph one
-    id1 -> id2
-```
-
 ## Sequence Diagram
 
 ```mermaid
