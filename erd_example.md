@@ -74,7 +74,7 @@ config:
 config:
   layout: dagre
   look: classic
-  theme: base
+  theme: dark
 ---
     sequenceDiagram
         autonumber
