@@ -70,6 +70,12 @@ config:
 ## Sequence Diagram
 
 ```mermaid
+---
+config:
+  layout: dagre
+  look: classic
+  theme: neutral
+---
     sequenceDiagram
         autonumber
         participant web as Web Browser
