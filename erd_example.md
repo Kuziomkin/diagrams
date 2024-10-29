@@ -57,7 +57,7 @@ config:
 ---
 config:
   layout: dagre
-  look: handDrawn
+  look: classic
   theme: neutral
 ---
     architecture-beta
