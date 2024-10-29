@@ -6,7 +6,7 @@
         if_state --> False: if n < 0
         if_state --> True : if n >= 0
 ```
-
+---
 
 ```mermaid
     erDiagram
