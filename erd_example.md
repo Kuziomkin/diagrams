@@ -19,7 +19,7 @@ config:
 config:
   layout: dagre
   look: classic
-  theme: base
+  theme: neutral
 ---
     stateDiagram-v2
         state if_state <<choice>>
@@ -74,7 +74,7 @@ config:
 config:
   layout: dagre
   look: classic
-  theme: neutral
+  theme: base
 ---
     sequenceDiagram
         autonumber
