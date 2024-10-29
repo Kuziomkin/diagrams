@@ -17,10 +17,9 @@ config:
 ```mermaid
 ---
 config:
-  layout: elk
-  elk:
-    mergeEdges: true
-    nodePlacementStrategy: LINEAR_SEGMENTS
+  layout: dagre
+  look: classic
+  theme: default
 ---
     stateDiagram-v2
         state if_state <<choice>>
