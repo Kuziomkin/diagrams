@@ -29,6 +29,20 @@ config:
         if_state --> True : if n >= 0
 ```
 
+```mermaid
+---
+config:
+  layout: dagre
+  look: classic
+  theme: base
+---
+    stateDiagram-v2
+        state if_state <<choice>>
+        [*] --> IsPositive
+        IsPositive --> if_state
+        if_state --> False: if n < 0
+        if_state --> True : if n >= 0
+```
 
 ## Entity Relationship Diagrams
 
@@ -36,8 +50,8 @@ config:
 ---
 config:
   layout: dagre
-  look: handDrawn
-  theme: neutral
+  look: classic
+  theme: base
 ---
     erDiagram
         CUSTOMER ||--o{ ORDER : places
@@ -64,7 +78,7 @@ config:
 config:
   layout: dagre
   look: classic
-  theme: neutral
+  theme: base
 ---
     architecture-beta
         group api(cloud)[API]
