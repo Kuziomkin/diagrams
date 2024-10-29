@@ -33,6 +33,12 @@ config:
 ## Entity Relationship Diagrams
 
 ```mermaid
+---
+config:
+  layout: dagre
+  look: classic
+  theme: neutral
+---
     erDiagram
         CUSTOMER ||--o{ ORDER : places
         CUSTOMER {
@@ -58,7 +64,7 @@ config:
 config:
   layout: dagre
   look: classic
-  theme: neutral
+  theme: base
 ---
     architecture-beta
         group api(cloud)[API]
@@ -79,7 +85,7 @@ config:
 ---
 config:
   layout: dagre
-  look: handDrawn
+  look: classic
   theme: base
 ---
     sequenceDiagram
