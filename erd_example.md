@@ -54,6 +54,12 @@ config:
 ## Architecture Diagrams
 
 ```mermaid
+---
+config:
+  layout: dagre
+  look: handDrawn
+  theme: neutral
+---
     architecture-beta
         group api(cloud)[API]
     
@@ -73,7 +79,7 @@ config:
 ---
 config:
   layout: dagre
-  look: classic
+  look: handDrawn
   theme: base
 ---
     sequenceDiagram
