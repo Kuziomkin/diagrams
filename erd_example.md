@@ -1,4 +1,4 @@
-# State diagrams
+## State diagrams
 
 ```mermaid
     stateDiagram-v2
@@ -8,7 +8,7 @@
         if_state --> False: if n < 0
         if_state --> True : if n >= 0
 ```
----
+## Entity Relationship Diagrams
 
 ```mermaid
     erDiagram
@@ -29,7 +29,7 @@
             float pricePerUnit
         }
 ```
-
+## Architecture Diagrams
 
 ```mermaid
     architecture-beta
@@ -44,6 +44,8 @@
         disk1:T -- B:server
         disk2:T -- B:db
 ```
+
+## Sequence Diagram
 
 ```mermaid
     sequenceDiagram
