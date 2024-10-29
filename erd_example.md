@@ -36,7 +36,7 @@ config:
 ---
 config:
   layout: dagre
-  look: classic
+  look: handDrawn
   theme: neutral
 ---
     erDiagram
@@ -64,7 +64,7 @@ config:
 config:
   layout: dagre
   look: classic
-  theme: base
+  theme: neutral
 ---
     architecture-beta
         group api(cloud)[API]
