@@ -51,7 +51,7 @@ config:
 config:
   layout: dagre
   look: classic
-  theme: base
+  theme: neutral
 ---
     erDiagram
         CUSTOMER ||--o{ ORDER : places
@@ -100,7 +100,7 @@ config:
 config:
   layout: dagre
   look: classic
-  theme: base
+  theme: neutral
 ---
     sequenceDiagram
         autonumber
