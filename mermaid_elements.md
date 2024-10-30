@@ -49,7 +49,7 @@ flowchart LR
 
 ```mermaid
 ---
-title: __Use Case Diagram__
+title: Use Case Diagram
 config:
   layout: dagre
   look: classic
