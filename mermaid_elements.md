@@ -46,3 +46,16 @@ flowchart LR
     db -. Result Set .-> s
     s -. JSON .-> c
 ```
+
+```mermaid
+---
+config:
+  layout: dagre
+  look: classic
+  theme: neutral
+---
+flowchart LR
+  O[Operator]
+  subgraph " "
+    b([Rounded])
+```
