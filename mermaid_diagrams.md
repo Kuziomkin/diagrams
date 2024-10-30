@@ -59,7 +59,7 @@ config:
             %% define relationships
             A --Get Client Information--> D
             D -.Information.- A
-            E -- Booked Item --> A
+            D -- Booked Item --> A
             A -.Operation Result.-> E
             A -- Get Catalog--> B
             B -. Catalog .-> A
