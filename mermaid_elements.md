@@ -63,7 +63,7 @@ config:
         subgraph " "
             direction LR
             %% define relationships
-            O -- Booked Item -- B
+            O --- Booked Item --- B
 
         end
 
