@@ -58,14 +58,14 @@ config:
     flowchart TD
         %% define components
         O[Operator]
-        B([System B])
-        
+
         subgraph " "
             direction LR
-            %% define relationships
-            O -- Booked Item --> B
-
+            B([System B])
         end
+
+        %% define relationships
+        O -- Booked Item --> B
 
 ```
 
