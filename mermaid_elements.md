@@ -57,25 +57,15 @@ config:
 ---
     flowchart TD
         %% define components
-        A(((System A)))
+        A([System A])
         B[System B]
-        C[System C]
-        D[System D]
-        E[System E]
         click B "https://github.com/Kuziomkin/diagrams/blob/main/mermaid_diagrams.md#flow-chart-1" "This is a tooltip for a link"
 
         subgraph " "
             direction LR
             %% define relationships
-            E -- Booked Item --> A
-            A -.Operation Result.-> E
-            A:::someclass --Get Client Information--> D
-            classDef someclass fill:#f96
-            D -.Information.- A
-            A -- Get Catalog--> B
-            B -. Catalog .-> A
-            A --Process Transaction--> C
-            C -.Process Result.->A
+            A -- Booked Item --> B
+
         end
 
 ```
