@@ -64,7 +64,8 @@ config:
             %% define relationships
             E -- Booked Item --> A
             A -.Operation Result.-> E
-            A --Get Client Information--> D
+            A:::someclass --Get Client Information--> D
+            classDef someclass fill:#f96
             D -.Information.- A
             A -- Get Catalog--> B
             B -. Catalog .-> A
