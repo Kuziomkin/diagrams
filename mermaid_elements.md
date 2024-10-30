@@ -69,7 +69,7 @@ config:
         %% define relationships
         O --> L
         O --> G
-        B -.Extend.-> G
+        G -.Extend.-> B
 ```
 
 
