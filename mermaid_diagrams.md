@@ -57,7 +57,7 @@ config:
         C[System C]
         D[System D]
         E[System E]
-        click B "https://www.github.com" "This is a tooltip for a link"
+        click B "https://github.com/Kuziomkin/diagrams/blob/main/mermaid_diagrams.md#flow-chart-1" "This is a tooltip for a link"
 
         subgraph " "
             direction LR
