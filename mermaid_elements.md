@@ -58,7 +58,8 @@ flowchart LR
   O[Operator]
   B([Rounded])
 
-  %% define relationships
   subgraph " "
-  O --> B
+    direction LR
+    %% define relationships
+    O -- Booked Item --> B
 ```
