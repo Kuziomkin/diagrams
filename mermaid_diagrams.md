@@ -54,6 +54,7 @@ config:
         C[System C]
         D[System D]
         E[System E]
+        click B "https://www.github.com" "This is a tooltip for a link"
 
         subgraph " "
             direction LR
