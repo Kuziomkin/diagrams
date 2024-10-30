@@ -75,17 +75,4 @@ config:
 
 ```
 
-```mermaid
----
-title: Context Diagram
-config:
-  layout: dagre
-  look: classic
-  theme: neutral
----
-flowchart LR
-    A:::someclass --> B
-    classDef someclass fill:#f96
-```
-
 
