@@ -57,5 +57,6 @@ config:
 flowchart LR
   O[Operator]
   subgraph " "
-    b([Rounded])
+    B([Rounded])
+  O --- B
 ```
