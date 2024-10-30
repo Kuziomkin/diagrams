@@ -49,17 +49,36 @@ flowchart LR
 
 ```mermaid
 ---
+title: Context Diagram
 config:
   layout: dagre
   look: classic
   theme: neutral
 ---
-flowchart LR
-  O[Operator]
-  B(Rounded)
+    flowchart TD
+        %% define components
+        A(((System A)))
+        B[System B]
+        C[System C]
+        D[System D]
+        E[System E]
+        click B "https://github.com/Kuziomkin/diagrams/blob/main/mermaid_diagrams.md#flow-chart-1" "This is a tooltip for a link"
 
-  subgraph " "
-    direction LR
-    %% define relationships
-    O -- Booked Item --> B
+        subgraph " "
+            direction LR
+            %% define relationships
+            E -- Booked Item --> A
+            A -.Operation Result.-> E
+            A:::someclass --Get Client Information--> D
+            classDef someclass fill:#f96
+            D -.Information.- A
+            A -- Get Catalog--> B
+            B -. Catalog .-> A
+            A --Process Transaction--> C
+            C -.Process Result.->A
+        end
+
 ```
+
+
+
