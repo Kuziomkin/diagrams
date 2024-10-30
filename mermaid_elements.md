@@ -65,7 +65,7 @@ config:
         end
 
         %% define relationships
-        O --> B
+        O---B
 
 ```
 
