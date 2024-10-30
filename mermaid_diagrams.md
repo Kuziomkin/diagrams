@@ -57,10 +57,10 @@ config:
 
         subgraph " "
             %% define relationships
+            E -- Booked Item --> A
+            A -.Operation Result.-> E
             A --Get Client Information--> D
             D -.Information.- A
-            D -- Booked Item --> A
-            A -.Operation Result.-> E
             A -- Get Catalog--> B
             B -. Catalog .-> A
             A --Process Transaction--> C
