@@ -50,14 +50,17 @@ config:
     flowchart LR
         %% define components
         D[System D]
+        E[System E]
         A(((System A)))
         B[System B]
         C[System C]
 
         subgraph " "
             %% define relationships
-            A --Get Information--> D
+            A --Get Client Information--> D
             D -.Information.- A
+            E -- Booked Item --> A
+            A -.Operation Result.-> E
             A -- Get Catalog--> B
             B -. Catalog .-> A
             A --Process Transaction--> C
