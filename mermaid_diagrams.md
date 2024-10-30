@@ -49,11 +49,11 @@ config:
 ---
     flowchart TD
         %% define components
-        D[System D]
-        E[System E]
         A(((System A)))
         B[System B]
         C[System C]
+        D[System D]
+        E[System E]
 
         subgraph " "
             %% define relationships
