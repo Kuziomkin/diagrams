@@ -56,6 +56,7 @@ config:
         E[System E]
 
         subgraph " "
+            direction LR
             %% define relationships
             E -- Booked Item --> A
             A -.Operation Result.-> E
