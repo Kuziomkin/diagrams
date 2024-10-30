@@ -55,7 +55,7 @@ config:
   look: classic
   theme: neutral
 ---
-    flowchart TD
+    flowchart LR
         %% define components
         A[/fa:fa-user Actor\]
 
