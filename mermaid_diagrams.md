@@ -1,4 +1,4 @@
-# Flor Chart 1
+# Flow Chart 1
 ```mermaid
 ---
 config:
@@ -40,7 +40,7 @@ flowchart TD
     B ---->|No| E((End))
 ```
 
-# Flor Chart 1
+# Flow Chart 2
 
 ```mermaid
 ---
