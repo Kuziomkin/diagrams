@@ -54,7 +54,8 @@ config:
         %% define components
         A(((System A)))
         B[System B]
-        C[System C]
+        C[System C]::sys
+        classDef sys fill:#f96
         D[System D]
         E[System E]
         click B "https://github.com/Kuziomkin/diagrams/blob/main/mermaid_diagrams.md#flow-chart-1" "This is a tooltip for a link"
