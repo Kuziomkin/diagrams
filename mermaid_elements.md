@@ -57,7 +57,7 @@ config:
 ---
     flowchart TD
         %% define components
-        O[Operator]
+        A[/fa:fa-user Actor\]
 
         subgraph " "
             direction LR
@@ -67,9 +67,10 @@ config:
         end
 
         %% define relationships
-        O --> L
-        O --> G
+        A --> L
+        A --> G
         G -.Extend.-> B
+        B -.Use.-> L
 ```
 
 
