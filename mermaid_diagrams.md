@@ -47,7 +47,7 @@ config:
   look: classic
   theme: neutral
 ---
-    flowchart TD
+    flowchart LR
         %% define components
         D[System D]
         A(((System A)))
