@@ -56,7 +56,9 @@ config:
 ---
 flowchart LR
   O[Operator]
+  B([Rounded])
+
+  %% define relationships
   subgraph " "
-    B([Rounded])
   O --- B
 ```
