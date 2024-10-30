@@ -56,7 +56,7 @@ config:
 ---
 flowchart LR
   O[Operator]
-  B([Rounded])
+  B(Rounded)
 
   subgraph " "
     direction LR
