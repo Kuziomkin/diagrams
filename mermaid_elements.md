@@ -61,12 +61,16 @@ config:
 
         subgraph " "
             direction LR
-            B([System B])
+            L([Login])
+            G([Get Places])
+            B([Book Place])
         end
 
         %% define relationships
+        O --> L
+        O --> G
         O --> B
-
+        B -.Use.-> G
 ```
 
 
