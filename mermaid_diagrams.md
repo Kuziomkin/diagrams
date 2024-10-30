@@ -58,7 +58,7 @@ config:
         subgraph " "
             direction LR
             %% define relationships
-            E[left] -- Booked Item --> A[right]
+            E[top] -- Booked Item --> A[bottom]
             A -.Operation Result.-> E
             A --Get Client Information--> D
             D -.Information.- A
