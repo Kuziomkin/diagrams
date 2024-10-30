@@ -65,7 +65,7 @@ config:
         end
 
         %% define relationships
-        O -- Simple Link -- B
+        O ----- B
 
 ```
 
