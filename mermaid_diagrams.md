@@ -54,8 +54,7 @@ config:
         %% define components
         A(((System A)))
         B[System B]
-        C[System C]::sys
-        classDef sys fill:#f96
+        C[System C]
         D[System D]
         E[System E]
         click B "https://github.com/Kuziomkin/diagrams/blob/main/mermaid_diagrams.md#flow-chart-1" "This is a tooltip for a link"
@@ -73,6 +72,19 @@ config:
             C -.Process Result.->A
         end
 
+```
+
+```mermaid
+---
+title: Context Diagram
+config:
+  layout: dagre
+  look: classic
+  theme: neutral
+---
+flowchart LR
+    A:::someclass --> B
+    classDef someclass fill:#f96
 ```
 
 
