@@ -57,14 +57,13 @@ config:
 ---
     flowchart TD
         %% define components
-        A([System A])
-        B[System B]
-        click B "https://github.com/Kuziomkin/diagrams/blob/main/mermaid_diagrams.md#flow-chart-1" "This is a tooltip for a link"
-
+        O[Operator]
+        B([System B])
+        
         subgraph " "
             direction LR
             %% define relationships
-            A -- Booked Item --> B
+            O -- Booked Item -- B
 
         end
 
