@@ -60,5 +60,5 @@ flowchart LR
 
   %% define relationships
   subgraph " "
-  O --- B
+  O --> B
 ```
