@@ -49,7 +49,8 @@ config:
   look: classic
   theme: neutral
 ---
-    flowchart LR
+    flowchart TB
+        
         %% define actors
         C[fa:fa-user Client]
 
