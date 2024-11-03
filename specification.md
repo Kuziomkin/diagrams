@@ -81,7 +81,7 @@ config:
 
 **Product Features**:
 
-- The client can authorize themselves
+- The client can [authorize](https://github.com/Kuziomkin/diagrams/blob/main/specification.md#Authorize-API-Consumer) themselves
 - The client can top up account via PayPal:
    - Create order
    - Capture payment for order
