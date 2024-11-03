@@ -66,6 +66,7 @@ config:
             CO([Create Order])
             AP([Authorize Payment])
         end
+        click A "https://github.com/Kuziomkin/diagrams/blob/main/specification.md#Authorize-API-Consumer" "See Authorize API Consumer Use Case"
 
         %% define relationships
         C --> A
@@ -189,7 +190,7 @@ config:
         PP ->>+ PAP: generate access token
           PAP ->> PAP: check credentials <br/> generate access token
         PAP -->>- PP: return access token
-          
+        Note over PP, PAP: Request to the PayPal <br/> with using the access token
     PP -->>- BS: result
    
 ```
