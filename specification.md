@@ -194,7 +194,7 @@ config:
    
 ```
 
-|Name|Authorize API Consumer|
+||Authorize API Consumer|
 |---|---|
 |**Participants**|Bank Server, Payment Platform, Clients DB, PayPal Processing|
 |**Trigger**|Payment Platform accepts PayPal service request|
