@@ -66,8 +66,7 @@ config:
             CO([Create Order])
             AP([Authorize Payment])
         end
-        click A "https://github.com/Kuziomkin/diagrams/blob/main/specification.md#Authorize-API-Consumer" "See Authorize API Consumer Use Case"
-
+        click A "https://github.com/Kuziomkin/diagrams/blob/main/specification.md#Authorize-API-Consumer"
         %% define relationships
         C --> A
         C --> T
