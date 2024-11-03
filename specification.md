@@ -41,9 +41,11 @@ Within six months of implementation, ten percent of Platform customers subscribe
 - Quality assurance specialists - these are the individuals responsible for testing the PayPal integration to ensure that it is working correctly.
 
 # Project Scope
+
+## Use Case Diagram
+
 ```mermaid
 ---
-title: Top Up Account
 config:
   layout: dagre
   look: classic
@@ -86,3 +88,116 @@ config:
  - The client can fetch order details
    - Show order details
   
+
+## Conceptual Architecture
+
+```mermaid
+
+---
+config:
+  layout: dagre
+  look: classic
+  theme: neutral
+---
+  flowchart TB
+  subgraph "Solution Components"
+
+    subgraph "**Bank X**"
+      %% define components
+      UI["User Interface"]
+      BS["Bank Server"]
+
+      %%define relationships
+      direction TB
+      UI --> BS
+    end
+
+    subgraph "**PLATFORM**"
+      %% define components
+      PP["Payment Platform"]
+      CD[("Clients DB")]
+
+      %%define relationships
+      direction LR
+      PP --> CD
+    end
+
+    subgraph "**PayPal**"
+      %% define components
+      AP["Authorization Page"]
+      PA["PayPal Processing"]
+
+      %%define relationships
+      direction TB
+      PA --> AP
+    end
+
+    %%define relationships
+    direction TB
+    BS --> PP
+
+    %%define relationships
+    direction TB
+    PP ---> PA
+  end
+```
+
+
+  Systems components:
+
+- Bank
+    - User Interface
+    - Bank Server 
+- Platform
+    - Payment Platform
+    - Clients DataBase
+    - Platform API
+- PayPal
+    - PayPal Processing
+    - Authorization Page
+    - PayPal API
+
+# System Features
+## Use Cases
+### Authorize API Consumer
+Authorization is the process of determining whether a client or user has the permission to access a specific resource or perform a specific action through an API. This is typically done by verifying that the client or user has the necessary permissions or privileges to access the resource or perform the action.
+
+**Diagram**
+---
+
+```mermaid
+---
+config:
+  layout: dagre
+  look: classic
+  theme: neutral
+---
+  sequenceDiagram
+    autonumber
+    participant BS as Bank Server
+    participant PP as Payment Platform
+    participant CD as Clients DB
+    participant PAP as PayPal Processing
+
+    BS ->>+ PP: send PayPal <br/> service Request
+      PP ->> PP: retrieve the signature <br/> from the Request
+      PP ->>+ CD: find the Client's public key
+      CD -->>- PP: return public key
+      PP ->> PP: use public key <br/> to verify signature
+      PP ->>+ CD: find the PayPal Client's credentials
+      CD -->>- PP: return credentials
+        PP ->>+ PAP: generate access token
+          PAP ->> PAP: check credentials <br/> generate access token
+        PAP -->>- PP: return access token
+          
+    PP -->>- BS: result
+   
+```
+
+|||
+|---|---|
+|**Participants**|Bank Server, Payment Platform, Clients DB, PayPal Processing|
+|**Trigger**|Payment Platform accepts PayPal service request|
+|**Main Flow**|01: Bank Server sends Request to Payment Platform <br> 02: Payment Platform retrieves the signature from the Authorization header <br> 03: Payment Platform queries Clients DataBase to find Client by using keyId from signature <br> 04: Clients public key returns from Clients DataBase <br> 05: Payment Platform uses the public key to verify the signature <br> 06: Payment Platform queries Clients DataBase to get Clients credentials <br> 07: Clients credentials returns from Clients DataBase <br> 08: Payment Platform sends the request to PayPal Processing to generate access token <br> 09: PayPal Processing checks credentials and generates access token <br> 10: Access token returns to Payment Platform <br> ... <br> 11: Bank Server gets operation result|    
+|**Alternative and Negative Flows**| &mdash; Step 02 of the Main flow : There is no signature in the header => Bank Server gets HTTP 400 Bad Request <br> &mdash; Step 05 of the Main flow : Signature verification failed => Bank Server gets HTTP 401 Unauthorized|
+|**Result**|Client successfully authorized|
